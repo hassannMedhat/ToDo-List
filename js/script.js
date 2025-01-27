@@ -59,17 +59,19 @@ function clearAllTasks() {
   showNotification("All tasks cleared!", "danger");
 }
 
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+  localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
+}
+
+function toggleTaskCompletion(taskElement) {
+  taskElement.classList.toggle("completed");
+  saveTasks();
+}
+
 function updateTaskCount() {
   const taskCount = document.getElementById("taskList").children.length;
   document.getElementById("taskCount").innerText = taskCount;
-
-  // إظهار زر Clear All فقط لو فيه 2 تاسك أو أكتر
-  const clearAllBtn = document.getElementById("clearAllBtn");
-  if (taskCount >= 2) {
-    clearAllBtn.classList.remove("d-none");
-  } else {
-    clearAllBtn.classList.add("d-none");
-  }
 }
 
 function saveTasks() {

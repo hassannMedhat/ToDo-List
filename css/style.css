@@ -24,21 +24,17 @@ body.dark-mode {
   color: #f8f9fa;
 }
 
-.task-input {
-  border-radius: 5px;
-}
-
-.btn-add-task {
-  margin-top: 10px;
+.progress-bar {
+  transition: width 0.5s ease;
 }
 
 .task-list li {
   transition: all 0.3s ease;
 }
 
-.task-list li.removing {
-  opacity: 0;
-  transform: scale(0.9);
+.task-list li.completed {
+  text-decoration: line-through;
+  color: gray;
 }
 
 .notification {
@@ -59,23 +55,4 @@ body.dark-mode {
   opacity: 1;
 }
 
-.alert-success {
-  background-color: #d4edda;
-  color: #155724;
-}
-
-.alert-danger {
-  background-color: #f8d7da;
-  color: #721c24;
-}
-
-.task-counter {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.completed {
-  text-decoration: line-through;
-  color: gray;
-  transition: all 0.3s ease-in-out;
-}
+/*  */
