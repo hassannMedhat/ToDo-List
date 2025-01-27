@@ -1,63 +1,81 @@
 body {
-    background-color: #f8f9fa;
-    font-family: "Helvetica", sans-serif;
-  }
-
-a {
-    position: absolute; /* Use absolute positioning */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for element's own size */
-    text-align: center; 
+  background-color: #f8f9fa;
+  font-family: "Helvetica", sans-serif;
+  transition: all 0.3s ease;
 }
 
-  .task-container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  .task-input {
-    border-radius: 5px;
-  }
-  .btn-add-task {
-    margin-top: 10px;
-  }
-  .task-list li {
-    transition: all 0.3s ease;
-  }
-  .task-list li.removing {
-    opacity: 0;
-    transform: scale(0.9);
-  }
+body.dark-mode {
+  background-color: #212529;
+  color: #f8f9fa;
+}
 
-  .notification {
-    position: fixed;
-    top: 10%;
-    right: -300px;
-    max-width: 300px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-    z-index: 1000;
-  }
-  
-  .notification.show {
-    right: 10px;
-    opacity: 1;
-  }
-  
-  .alert-success {
-    background-color: #d4edda;
-    color: #155724;
-  }
-  
-  .alert-danger {
-    background-color: #f8d7da;
-    color: #721c24;
-  }
-  
+.task-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.dark-mode .task-container {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+
+.task-input {
+  border-radius: 5px;
+}
+
+.btn-add-task {
+  margin-top: 10px;
+}
+
+.task-list li {
+  transition: all 0.3s ease;
+}
+
+.task-list li.removing {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.notification {
+  position: fixed;
+  top: 10%;
+  right: -300px;
+  max-width: 300px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  z-index: 1000;
+}
+
+.notification.show {
+  right: 10px;
+  opacity: 1;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.task-counter {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+  transition: all 0.3s ease-in-out;
+}
